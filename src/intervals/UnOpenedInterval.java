@@ -11,5 +11,4 @@ public class UnOpenedInterval extends Interval {
 		return getMinimum() <= value && value <= getMaximum();
 	}
 
-
 }
