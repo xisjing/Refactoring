@@ -2,14 +2,14 @@ package intervals;
 
 public class Interval {
 
-	private double minimum;
-	private double maximum;
+	protected double minimum;
+	protected double maximum;
 	private Opening opening;
 
-	public Interval(double minimum, double maximum, Opening opening) {
+	public Interval(double minimum, double maximum) {
 		this.minimum = minimum;
 		this.maximum = maximum;
-		this.opening = opening;
+		
 	}
 
 	public double midPoint() {
