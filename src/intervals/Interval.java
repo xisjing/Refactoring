@@ -7,23 +7,23 @@ public class Interval {
 
 
 	public Interval(double minimum, double maximum) {
-		this.minimum = getMinimun();
-		this.maximum = getMaximun();
+		this.minimum = getMinimum();
+		this.maximum = getMaximum();
 		
 	}
 	
-	public double getMinimun() {
+	public double getMinimum() {
 	     return minimum;
 	     
 	}
 	
-	public double getMaximun(){
+	public double getMaximum(){
 		 return maximum;
 		
 	}
 
 	public double midPoint() {
-		return (maximum + minimum) / 2;
+		return (this.maximum + this.minimum) / 2;
 	}
 
 	public boolean includes(double value) {
@@ -124,36 +124,8 @@ public class Interval {
 	}
 
 	public boolean intersectsWith(Interval interval) {
-		if (minimum == interval.maximum) {
-			switch (opening) {
-			case BOTH_OPENED:
-			case LEFT_OPENED:
-				return false;
-			case RIGHT_OPENED:
-			case UNOPENED:
-				return interval.opening == Opening.LEFT_OPENED ||
-						interval.opening == Opening.UNOPENED;
-			default:
-				assert false;
-				return false;
-			}
-		}
-		if (maximum == interval.minimum) {
-			switch (opening) {
-			case BOTH_OPENED:
-			case RIGHT_OPENED:
-				return false;
-			case LEFT_OPENED:
-			case UNOPENED:
-				return interval.opening == Opening.RIGHT_OPENED ||
-						interval.opening == Opening.UNOPENED;
-			default:
-				assert false;
-				return false;
-			}
-		}
-		return this.includes(interval.minimum)
-				|| this.includes(interval.maximum);
+		// TODO
+		return false;
 	}
 
 	@Override
