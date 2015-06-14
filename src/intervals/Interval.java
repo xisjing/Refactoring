@@ -2,13 +2,23 @@ package intervals;
 
 public class Interval {
 
-	protected double minimum;
-	protected double maximum;
-	private Opening opening;
+	private double minimum;
+	private double maximum;
+
 
 	public Interval(double minimum, double maximum) {
-		this.minimum = minimum;
-		this.maximum = maximum;
+		this.minimum = getMinimun();
+		this.maximum = getMaximun();
+		
+	}
+	
+	public double getMinimun() {
+	     return minimum;
+	     
+	}
+	
+	public double getMaximun(){
+		 return maximum;
 		
 	}
 
