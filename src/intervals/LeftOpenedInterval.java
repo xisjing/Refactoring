@@ -10,4 +10,8 @@ public class LeftOpenedInterval extends Interval {
 		return getMinimum() < value && value <= getMaximum();
 	}
 	
+	public boolean includes(Interval interval){
+		return ((this.includes(interval.getMinimum()) || (interval.getMinimum()==this.getMinimum())) && this.includes(interval.getMaximum()));
+	}
+	
 }
